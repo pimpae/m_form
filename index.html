@@ -904,6 +904,54 @@
 
 		</div>
 	</main>
+
+	<!-- Button to Open Modal -->
+ 
+	<!-- Modal -->
+	<div class="modal fade" id="pdpaModal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content"> 
+				<div class="modal-body">
+					<h5>ประกาศความเป็นส่วนตัวสำหรับผู้สมัครงาน</h5>
+
+					บริษัท  ให้ความสำคัญกับความเป็นส่วนตัวของท่าน และดำเนินการเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของท่าน ตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA)
+					<br>
+					วัตถุประสงค์ของการเก็บข้อมูล
+					ข้อมูลส่วนบุคคลที่ท่านให้ไว้ในแบบฟอร์มนี้ จะถูกใช้เพื่อวัตถุประสงค์ในการพิจารณาคุณสมบัติของผู้สมัครงาน การติดต่อ และกระบวนการคัดเลือกบุคลากรของบริษัท
+					<br>
+					ประเภทของข้อมูลที่เก็บรวบรวม
+					ข้อมูลที่อาจถูกเก็บรวบรวม ได้แก่ ชื่อ-นามสกุล ที่อยู่ อีเมล หมายเลขโทรศัพท์ ประวัติการศึกษา ประสบการณ์ทำงาน และข้อมูลอื่น ๆ ที่เกี่ยวข้องกับการสมัครงาน
+					<br>
+					การเปิดเผยข้อมูล
+					บริษัทอาจเปิดเผยข้อมูลของท่านต่อหน่วยงานหรือบุคคลที่เกี่ยวข้องกับกระบวนการสรรหาและว่าจ้าง ทั้งนี้ บริษัทจะดำเนินการภายใต้หลักเกณฑ์ของกฎหมายคุ้มครองข้อมูลส่วนบุคคล
+					<br>
+					ระยะเวลาการเก็บรักษาข้อมูล
+					ข้อมูลส่วนบุคคลของท่านจะถูกเก็บรักษาไว้เป็นระยะเวลา [ระบุระยะเวลา เช่น 1 ปี] หรือจนกว่ากระบวนการสรรหาจะสิ้นสุดลง เว้นแต่ท่านให้ความยินยอมให้บริษัทเก็บรักษาข้อมูลไว้เพื่อโอกาสในการสมัครงานในอนาคต
+					<br>
+					สิทธิของท่าน
+					ท่านมีสิทธิในการเข้าถึง แก้ไข หรือขอให้ลบข้อมูลของท่านได้ รวมถึงการเพิกถอนความยินยอมที่ให้ไว้ โดยสามารถติดต่อบริษัทได้ที่ [ข้อมูลการติดต่อของบริษัท]
+					<br> 
+					<div class="row mb-3"> 
+						<div class="col-md-12">
+							<label for="validationCustom02" class="form-label">การให้ความยินยอม <strong>*</strong></label> 
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="pdpaCheck"  >
+								<label class="form-check-label" for="pdpaCheck">
+									ข้าพเจ้ารับทราบและยินยอมให้บริษัทเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้าตามที่ระบุข้างต้น
+								</label> 
+							</div>
+						</div>
+					</div>
+					
+				</div> 
+				<div class="modal-footer">
+					<div class="col-12 text-center">
+						<button type="button" class="btn btn-success" data-bs-dismiss="modal">ยืนยัน</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	  
 	<script src="js/jquery.min.js"></script> 
 	<script src="js/popper.min.js" ></script>
@@ -916,7 +964,17 @@
 	
 	<script> 
 
-			
+		$(document).ready(function(){ 
+			$("#pdpaModal").modal('show'); 
+
+			$("#pdpaCheck").change(function () {
+			if ($(this).is(":checked")) {
+				$(".modal-footer").addClass("d-none");
+			} else {
+				$(".modal-footer").addClass("d-block");
+			}
+			});
+		});
                 
 		$('.date').datepicker({ 
 			language: 'th',
