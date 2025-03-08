@@ -13,6 +13,12 @@
   --main-text: #7D8391;
   --color-danger: #E5172F; 
 } 
+@font-face {
+  font-family: 'calibri';
+  src: url('../fonts/calibri-regular.ttf'); 
+}
+
+
 
 a{
   text-decoration: none !important; 
@@ -21,7 +27,7 @@ a:hover{
   text-decoration: none;
 } 
 body{
-  font-family: "Noto Sans Thai", serif;
+  font-family: "calibri", serif;
   font-style: normal;
 }    
 header{
