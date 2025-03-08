@@ -944,7 +944,7 @@
 					</div>
 					
 				</div> 
-				<div class="modal-footer">
+				<div class="modal-footer d-none">
 					<div class="col-12 text-center">
 						<button type="button" class="btn btn-success" data-bs-dismiss="modal">ยืนยัน</button>
 					</div>
@@ -969,9 +969,11 @@
 
 			$("#pdpaCheck").change(function () {
 			if ($(this).is(":checked")) {
-				$(".modal-footer").addClass("d-none");
-			} else {
 				$(".modal-footer").addClass("d-block");
+				$(".modal-footer").removeClass("d-none");
+			} else {
+				$(".modal-footer").addClass("d-none");
+				$(".modal-footer").removeClass("d-block");
 			}
 			});
 		});
