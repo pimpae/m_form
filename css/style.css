@@ -105,12 +105,36 @@ input[type='text']:focus{
   }   
   .addex{
     text-align: center;
+  } 
+  header{
+    height: auto; 
   }
   header .logo{
     display: block;
     margin: auto;
+    height: 50px;
   }
-  
+  header h3{
+    font-size: 18px;
+  }
+  header h6{
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  main .container-fluid.p-5{
+    padding: 25px !important;
+  }
+  main h1{
+    text-align: center;
+  }
+  .imgx.ms-auto{
+    margin-right: auto;
+  }
+  .table{
+    width: 250%;
+  }
 }
 @media only screen and (min-width: 1025px) { /* PC */
   .pc-x{
