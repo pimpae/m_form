@@ -696,7 +696,26 @@
 						</div> 
 					</div>
 
-					<div class="table-responsive">
+					<div class="row mb-3"> 
+						<div class="col-md-3 col-12">
+							<label for="inputID1" class="form-label">Employer | ชื่อสถานประกอบการ</label> 
+							<input type="text" class="form-control" id="inputID1" placeholder=""> 
+						</div>  
+						<div class="col-md-3 col-12">
+							<label for="inputID1" class="form-label">From-To | จาก-ถึง</label> 
+							<input type="text" class="form-control" id="inputID1" placeholder=""> 
+						</div>  
+						<div class="col-md-3 col-12">
+							<label for="inputID1" class="form-label">Position | ตำแหน่ง</label> 
+							<input type="text" class="form-control" id="inputID1" placeholder=""> 
+						</div>  
+						<div class="col-md-3 col-12">
+							<label for="inputID1" class="form-label">Salary | เงินเดือน</label> 
+							<input type="text" class="form-control" id="inputID1" placeholder=""> 
+						</div>  
+					</div>
+
+					<div class="table-responsive dx-none">
 						<table class="table table-bordered">
 							<thead>
 								<tr>
@@ -965,7 +984,7 @@
 	<script> 
 
 		$(document).ready(function(){ 
-			$("#pdpaModal").modal('show'); 
+			//$("#pdpaModal").modal('show'); 
 
 			$("#pdpaCheck").change(function () {
 			if ($(this).is(":checked")) {

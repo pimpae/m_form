@@ -137,10 +137,7 @@ input[type='text']:focus{
   }
   .imgx.ms-auto{
     margin-right: auto;
-  }
-  .table{
-    width: 250%;
-  }
+  } 
 }
 @media only screen and (min-width: 1025px) { /* PC */
   .pc-x{
